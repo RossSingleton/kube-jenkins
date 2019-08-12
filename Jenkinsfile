@@ -30,7 +30,8 @@ pipeline {
                     - name: CONTAINER_ENV_VAR
                     value: busybox
                 """
-   }
+        }
+    }
     stages {
         stage('Build') { 
             steps {
