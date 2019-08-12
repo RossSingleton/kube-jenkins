@@ -4,15 +4,15 @@ labels:
     some-label: jenkins-slave
 spec:
 containers:
-- name: jnlp
+- name: docker-slave
   env:
-    - name: CONTAINER_ENV_VAR
-      value: jnlp
+    - name: docker-slave
+      value: docker-slave
 - name: docker
   image: docker
   command:
       - cat
   tty: true
   env:
-    - name: CONTAINER_ENV_VAR
+    - name: docker-slave2
       value: docker
