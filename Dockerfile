@@ -7,6 +7,7 @@ RUN /usr/local/bin/install-plugins.sh ssh-slaves
 RUN /usr/local/bin/install-plugins.sh workflow-aggregator
 RUN /usr/local/bin/install-plugins.sh git
 RUN /usr/local/bin/install-plugins.sh github-api
+RUN /usr/local/bin/install-plugins.sh configuration-as-code
 
 # Artifacts
 RUN /usr/local/bin/install-plugins.sh htmlpublisher
