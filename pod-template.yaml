@@ -4,15 +4,18 @@ labels:
     some-label: jenkins-slave
 spec:
 containers:
-- name: docker-slave
-  env:
-    - name: docker-slave
-      value: docker-slave
-- name: docker
-  image: docker
-  command:
-      - cat
-  tty: true
-  env:
-    - name: docker-slave2
-      value: docker
+  - name: my-container
+    image: docker
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - mountPath: /var/run/docker.sock
+      name: docker-socket-volume
+    securityContext:
+      privileged: true
+volumes:
+  - name: docker-socket-volume
+    hostPath:
+      path: /var/run/docker.sock
+      type: File
