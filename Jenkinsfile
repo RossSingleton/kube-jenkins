@@ -1,8 +1,11 @@
 pipeline {
+    // agent {
+    //     kubernetes {
+    //         yamlFile 'pod-template.yaml'
+    //     }
+    // }
     agent {
-        kubernetes {
-            yamlFile 'pod-template.yaml'
-        }
+        label "docker"
     }
     stages {
         stage('Build') { 
