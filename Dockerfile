@@ -21,5 +21,7 @@ RUN /usr/local/bin/install-plugins.sh kubernetes
 
 # install Maven
 USER root
+COPY jenkins.yaml /var/lib/casc_configs
+ENV CASC_JENKINS_CONFIG=/var/lib/casc_configs
 RUN apt-get update && apt-get install -y maven
 USER jenkins

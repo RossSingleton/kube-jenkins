@@ -2,9 +2,18 @@ jenkins:
   agentProtocols:
   - "JNLP4-connect"
   - "Ping"
+  clouds:
+  - kubernetes:
+      connectTimeout: 5
+      containerCapStr: "10"
+      jenkinsUrl: "http://172.17.0.8:8080"
+      maxRequestsPerHostStr: "32"
+      name: "kubernetes"
+      readTimeout: 15
+      serverUrl: "https://192.168.64.39:8443"
   disableRememberMe: false
   markupFormatter: "plainText"
-  mode: NORMAL
+  mode: EXCLUSIVE
   myViewsTabBar: "standard"
   numExecutors: 2
   primaryView:
@@ -38,6 +47,7 @@ unclassified:
     createAccountBasedOnEmail: false
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://192.168.64.34:31168/"
   mailer:
     adminAddress: "address not configured yet <nobody@nowhere>"
     charset: "UTF-8"
