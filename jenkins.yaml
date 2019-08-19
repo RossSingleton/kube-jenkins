@@ -10,7 +10,7 @@ jenkins:
       maxRequestsPerHostStr: "32"
       name: "kubernetes"
       readTimeout: 15
-      serverUrl: "https://192.168.64.39:8443"
+      serverUrl: "https://192.168.64.40:8443"
   disableRememberMe: false
   markupFormatter: "plainText"
   mode: EXCLUSIVE
