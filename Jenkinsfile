@@ -8,7 +8,7 @@ podTemplate(label: 'mypod', containers: [
         stage('do some Docker work') {
             container('docker') {
                 sh "docker ps"
-                sh "docker run --restart always --rm --name mail -d bytemark/smtp"
+                sh "docker run --rm --name mail -d bytemark/smtp"
                 sh "docker ps"
             }
         }
