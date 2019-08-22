@@ -10,6 +10,7 @@ podTemplate(label: 'mypod', containers: [
                 // sh "docker stop fad6db0f155881526db77602c124b30550760a53687c512fcfdc87770562a4cb"
                 // sh "docker rm fad6db0f155881526db77602c124b30550760a53687c512fcfdc87770562a4cb"
                 sh "docker run --rm --name mail bytemark/smtp"
+                sh "docker stop mail"
                 sh "docker ps"
             }
         }
