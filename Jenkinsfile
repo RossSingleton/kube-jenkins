@@ -7,8 +7,8 @@ podTemplate(label: 'mypod', containers: [
     node('mypod') {
         stage('do some Docker work') {
             container('docker') {
-                // sh "docker stop fad6db0f155881526db77602c124b30550760a53687c512fcfdc87770562a4cb"
-                // sh "docker rm fad6db0f155881526db77602c124b30550760a53687c512fcfdc87770562a4cb"
+                sh "docker stop mail"
+                sh "docker rm mail"
                 sh "docker run --restart always --name mail -d bytemark/smtp"
                 sh "docker stop mail"
                 sh "docker rm mail"
