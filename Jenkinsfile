@@ -7,7 +7,7 @@ podTemplate(label: 'mypod', containers: [
     node('mypod') {
         stage('do some Docker work') {
             container('docker') {
-                sh "docker ps"
+                sh "docker kill *"
                 sh "docker run --rm --name mail -d bytemark/smtp"
                 sh "docker ps"
             }
