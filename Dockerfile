@@ -8,6 +8,7 @@ RUN /usr/local/bin/install-plugins.sh workflow-aggregator
 RUN /usr/local/bin/install-plugins.sh git
 RUN /usr/local/bin/install-plugins.sh github-api
 RUN /usr/local/bin/install-plugins.sh configuration-as-code
+RUN /usr/local/bin/install-plugins.sh kubernetes-cd
 
 # Artifacts
 RUN /usr/local/bin/install-plugins.sh htmlpublisher

@@ -2,7 +2,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-MY_ADDRESS = ''
+MY_ADDRESS = 'ross.singleton@devopsgroup.com'
 PASSWORD = ''
 
 
@@ -16,7 +16,7 @@ def main():
 
     # setup the parameters of the message
     msg['From'] = MY_ADDRESS
-    msg['To'] = ''
+    msg['To'] = 'katherine.axten@devopsgroup.com'
     msg['Subject'] = "This is TEST"
 
     # add in the message body
